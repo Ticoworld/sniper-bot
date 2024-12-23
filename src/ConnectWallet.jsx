@@ -13,7 +13,7 @@ const ConnectWallet = ({ userId }) => {
       userSession,
       appDetails: {
         name: 'My Telegram Bot',
-        icon: 'https://example.com/icon.png',
+        icon: 'https://www.crypticorn.com/wp-content/uploads/2024/06/Crypto-Sniper-Bots.webp',
       },
       onFinish: async () => {
         try {
@@ -32,7 +32,7 @@ const ConnectWallet = ({ userId }) => {
           // Log the values being sent to the server
           console.log('Sending to server:', { userId, wallet: selectedAddress });
 
-          const serverResponse = await fetch(`http://localhost:5000/update-wallet`, {
+          const serverResponse = await fetch(`https://sniper-an93.onrender.com/update-wallet`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, wallet: selectedAddress }),
